@@ -38,3 +38,12 @@ Para iniciar os testes, rode:
 rspec
 ```
 
+Essa aplicação foi construída com as seguintes tecnologias:
+
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Rack Cors](https://github.com/cyu/rack-cors)
+- [Axios](https://github.com/axios/axios)
+- [Bootstrap](https://getbootstrap.com/)
+- [RSpec](https://rspec.info/)
+- [FactoryBot](https://github.com/thoughtbot/factory_bot)
+- [Shoulda Matchers](https://matchers.shoulda.io/)
