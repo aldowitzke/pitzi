@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  config.formatter = :documentation
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -70,9 +71,9 @@ RSpec.configure do |config|
   # file, and it's useful to allow more verbose output when running an
   # individual spec file.
   if config.files_to_run.one?
-    # Use the documentation formatter for detailed output,
-    # unless a formatter has already been configured
-    # (e.g. via a command-line flag).
+    Use the documentation formatter for detailed output,
+    unless a formatter has already been configured
+    (e.g. via a command-line flag).
     config.default_formatter = "doc"
   end
 
