@@ -1,4 +1,4 @@
 class Order < ApplicationRecord
   belongs_to :user
-  validates :price, :installments, presence: true
+  validates :price, :imei, :device, presence: true
 end
