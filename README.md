@@ -16,7 +16,8 @@ git clone https://github.com/aldowitzke/pitzi.git
 cd pitzi-front
 
 3) Abra o index.html
-open ./index.html
+Linux $ xdg-open index.html
+MacOS $ open index.html
 
 4) Entre no diretório do serviço
 cd ../pitzi
