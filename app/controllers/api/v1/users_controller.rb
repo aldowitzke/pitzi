@@ -1,10 +1,11 @@
 class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
+
     if @user.save
-      render :show, status: :created
+      render json: { message: "User has been created" }, status: :created
     else
-      render_error
+      render json: { error: @user.errors.full_messages }, status: :internal_server_error
     end
   end
 
