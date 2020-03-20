@@ -1,24 +1,40 @@
-# README
+# Pitzi
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Essa é uma aplicação web separada em duas partes. A primeira parte, que faz parte desse repositório, é um serviço construído em Ruby on Rails para registro de assinaturas. O serviço recebe informações de um usuário como nome, CPF, e-mail e informações de sua ordem de compra, como aparelho de celular, IMEI, preço anual e prestações. O objetivo do serviço é receber e validar essas informações e persistir esses dados no banco.
 
-Things you may want to cover:
+A segunda parte da aplicação, que está [neste repositório](https://github.com/aldowitzke/pitzi-front), é a interface de cadastro de assinatura do usuário. Nessa interface, existe um formulário para captura de informações e uma requisição post para o serviço mencionado acima.
 
-* Ruby version
+### Instalando
 
-* System dependencies
+```
+1) Abra seu terminal e clone ambos projetos (serviço e interface):
+git clone https://github.com/aldowitzke/pitzi-front.git
+git clone https://github.com/aldowitzke/pitzi.git
+# É possível que seja pedido suas credenciais para clonar o repositório
 
-* Configuration
+2) Entre no diretório da interface
+cd pitzi-front
 
-* Database creation
+3) Abra o index.html
+open ./index.html
 
-* Database initialization
+4) Entre no diretório do serviço
+cd ../pitzi
 
-* How to run the test suite
+5) Configure
+bundle install
+rails db:create db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+6) Rode o serviço
+rails s
+```
 
-* Deployment instructions
+Depois dos passos realizados acima, você pode preencher o formulário aberto em seu browser e seu usuário será criado com as informações. Caso as informações não passem pelas validações, como CPF já registrado ou algum campo obrigatório em branco, você receberá um alerta.
 
-* ...
+### Testes
+
+Para iniciar os testes, rode:
+```
+rspec
+```
+
